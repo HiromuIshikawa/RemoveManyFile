@@ -14,6 +14,7 @@ int main(int argc, char **argv) {
   char path[1000];
   if ((fp = fopen(argv[1],"r")) == NULL) {
     fprintf(stderr,"cannot open FILE: %s", argv[1]);
+    exit(1);
   }
 
   while((fgets(path, 1000, fp)) != NULL) {
